@@ -1,12 +1,31 @@
 {
   "_meta": {
-    "version": "1.0",
-    "description": "Registro central de ferramentas do ecossistema Rudson. Consultado automaticamente por todos os agentes Claude antes de iniciar qualquer tarefa.",
+    "version": "1.1",
+    "description": "Registro central de ferramentas do ecossistema Rudson. Consultado OBRIGATORIAMENTE por todos os agentes Claude antes de iniciar qualquer tarefa.",
     "repo": "https://github.com/Rudson-Oliveira/Claude",
     "raw_url": "https://raw.githubusercontent.com/Rudson-Oliveira/Claude/main/TOOLS-REGISTRY.json",
     "rules_file": "TOOLS-REGISTRY-RULES.md",
-    "last_updated": "2026-06-14",
-    "total_tools": 22
+    "last_updated": "2026-06-16",
+    "total_tools": 23,
+    "startup_protocol": {
+      "mandatory": true,
+      "blocking": true,
+      "description": "GATE OBRIGATORIO. Nenhum agente pode dar prosseguimento a uma tarefa antes de concluir TODAS estas etapas. Pular o gate gera retrabalho e custo.",
+      "steps": [
+        "1. Ler este TOOLS-REGISTRY.json inteiro via raw_url",
+        "2. Ler TOOLS-REGISTRY-RULES.md (regras de uso e contribuicao)",
+        "3. Antes de USAR algo: procurar a ferramenta certa aqui por objetivo/tags",
+        "4. Antes de CRIAR algo: confirmar pelo campo id que ainda nao existe (evita duplicata)",
+        "5. So entao prosseguir com a tarefa"
+      ],
+      "confirmation": "Antes da primeira acao, o agente confirma internamente: 'Registro lido, X ferramentas conhecidas, nada do que preciso esta sendo recriado.'",
+      "anti_pattern": "Criar script ou ferramenta sem checar o registro = retrabalho + custo. Exemplo real: Connect-Claude.ps1 (repo n8n-workflows) duplicou connect-context.ps1 que ja existia porque o agente nao consultou o registro."
+    },
+    "critical_tools": {
+      "comment": "Ferramentas mais importantes do ecossistema — leia e priorize estas. Sao a base de tudo; nunca recrie equivalentes.",
+      "ids": ["odin_search", "odin_fetch", "odin_shell", "odin_status", "cli_connect_context"],
+      "why": "ODIN cobre 100% de web e shell com fallback automatico. connect-context.ps1 e o unico ponto de entrada para onboarding de qualquer agente."
+    }
   },
   "tools": [
     {
@@ -321,6 +340,23 @@
       "usage": "odin_status() para ver URLs ativas",
       "tags": ["tunnel", "remote", "ngrok", "access", "webhook"],
       "added": "2026-06-14",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "cli_connect_context",
+      "name": "connect-context.ps1 (bootstrap de contexto)",
+      "type": "cli-tool",
+      "server": null,
+      "available_in": ["all"],
+      "status": "active",
+      "critical": true,
+      "note": "CANONICO. Qualquer agente/pessoa roda este script para conectar ao ecossistema com contexto completo. NAO crie scripts de conexao novos — estenda este. Connect-Claude.ps1 (repo n8n-workflows) e uma variante project-specific que DEVERIA carregar este registro e nao recriar a logica.",
+      "description": "Bootstrap PowerShell: checa servicos locais, le git log, carrega TOOLS-REGISTRY do GitHub, chama Claude API e gera contexto pronto para colar em qualquer Claude",
+      "usage": ".\\connect-context.ps1 [-Task '...'] [-CopyToClipboard] [-NoAPI]",
+      "example": ".\\connect-context.ps1 -Task 'implementar auth' -CopyToClipboard",
+      "location": "C:\\Users\\rudpa\\connect-context.ps1 (repo CLAWDBOT)",
+      "tags": ["bootstrap", "context", "powershell", "onboarding", "connect", "critical"],
+      "added": "2026-06-16",
       "added_by": "claude-code"
     }
   ]

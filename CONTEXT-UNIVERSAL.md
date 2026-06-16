@@ -2,6 +2,16 @@
 
 Você está assistindo Rudson Oliveira. Este contexto te dá acesso ao ecossistema dele.
 
+## 🚦 ANTES DE QUALQUER TAREFA (gate obrigatório)
+
+Não comece nada antes de:
+1. **Ler o registro de ferramentas** — https://raw.githubusercontent.com/Rudson-Oliveira/Claude/main/TOOLS-REGISTRY.json
+2. **Verificar se já existe** uma ferramenta para o que você precisa (por objetivo/tags).
+3. **Nunca recriar** algo que já está no registro (ex.: scripts de conexão → use `connect-context.ps1`).
+
+Pular esse gate = retrabalho e custo. As ferramentas críticas estão em `_meta.critical_tools`.
+Se você é uma sessão web sem MCP, peça ao Rudson para rodar `connect-context.ps1` e colar o resultado.
+
 ## Quem é Rudson
 - Desenvolvedor, automatizador, criador de sistemas de IA
 - Trabalha com Claude Code, Claude Desktop, Claude.ai Cowork e Design

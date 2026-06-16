@@ -17,6 +17,39 @@ https://raw.githubusercontent.com/Rudson-Oliveira/Claude/main/TOOLS-REGISTRY.jso
 
 ---
 
+## 🚦 GATE OBRIGATÓRIO — antes de qualquer tarefa (BLOQUEANTE)
+
+> **O agente NÃO PODE dar prosseguimento até concluir TODAS as etapas abaixo.**
+> Pular este gate é o que faz agentes "comerem bola": reinventam ferramentas,
+> geram retrabalho e custo desnecessário.
+
+1. **Ler o registro inteiro** — `TOOLS-REGISTRY.json` via raw_url.
+2. **Ler estas regras** — o arquivo que você está lendo agora.
+3. **Antes de USAR algo** — procure no registro a ferramenta certa por objetivo/tags.
+   Pergunte: *"que ferramenta aqui já resolve isso?"*
+4. **Antes de CRIAR algo** — confirme pelo campo `id` que ainda não existe.
+   Se existe equivalente → **use, não recrie**.
+5. **Confirme internamente** antes da primeira ação:
+   *"Registro lido, X ferramentas conhecidas, nada do que preciso está sendo recriado."*
+
+### Ferramentas críticas — leia PRIMEIRO
+
+Estas são a base do ecossistema (campo `_meta.critical_tools`). Nunca crie equivalentes:
+
+| id | Por quê é crítica |
+|---|---|
+| `odin_search` / `odin_fetch` / `odin_shell` | Cobrem 100% de web e shell com fallback automático |
+| `odin_status` | Diagnóstico em tempo real de todos os providers |
+| `cli_connect_context` | Único ponto de entrada para onboarding de qualquer agente |
+
+### ⚠️ Exemplo real de falha do gate
+
+`Connect-Claude.ps1` (repo `n8n-workflows`) foi criado **duplicando** `connect-context.ps1`
+que já existia — o agente não consultou o registro. Resultado: dois scripts de conexão
+divergentes, manutenção dobrada. **Isso é exatamente o que o gate previne.**
+
+---
+
 ## Regras de adição (OBRIGATÓRIAS)
 
 ### 1. Verifique antes de adicionar
@@ -74,6 +107,17 @@ Adicione uma ferramenta SOMENTE se:
 | API externa | `api_` | `api_anthropic` |
 | Skill Claude | `skill_` | `skill_superpowers` |
 | CLI tool | `cli_` | `cli_git` |
+
+### 6. Comente as ferramentas importantes
+
+Ferramentas centrais devem ser sinalizadas para não passarem despercebidas:
+
+- `"critical": true` — marca a ferramenta como base do ecossistema.
+- `"note": "..."` — comentário livre: o que NÃO fazer, equivalentes a evitar, pegadinhas.
+- Adicione o `id` em `_meta.critical_tools.ids` para que apareça no topo do gate.
+
+> Regra de ouro: se um agente pode "comer bola" ignorando ou duplicando a ferramenta,
+> ela merece `critical` + `note`.
 
 ---
 
