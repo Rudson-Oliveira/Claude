@@ -12,6 +12,10 @@ Não comece nada antes de:
 Pular esse gate = retrabalho e custo. As ferramentas críticas estão em `_meta.critical_tools`.
 Se você é uma sessão web sem MCP, peça ao Rudson para rodar `connect-context.ps1` e colar o resultado.
 
+**Coordenação multi-agente:** vários agentes (Claude Code, Manus, Cowork) editam os mesmos
+repos. Git é a fonte única — `git pull` antes de começar, cheque se o arquivo já existe antes
+de criar, trabalhe em branch + PR. Ver `_meta.coordination` e a seção de coordenação nas RULES.
+
 ## Quem é Rudson
 - Desenvolvedor, automatizador, criador de sistemas de IA
 - Trabalha com Claude Code, Claude Desktop, Claude.ai Cowork e Design

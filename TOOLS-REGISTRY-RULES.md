@@ -50,6 +50,27 @@ divergentes, manutenção dobrada. **Isso é exatamente o que o gate previne.**
 
 ---
 
+## 🔀 Coordenação multi-agente (Git = fonte única)
+
+> Vários agentes editam os MESMOS repositórios em paralelo: **Claude Code, Manus, Cowork,
+> Desktop**. Sem disciplina de Git, eles duplicam trabalho e geram PRs concorrentes.
+
+**Regras (obrigatórias antes de tocar em qualquer repo):**
+
+1. `git pull origin <branch>` **antes** de começar — o estado pode ter mudado por outro agente.
+2. `git fetch` + procurar no repo se o arquivo/script que você vai criar **já existe**.
+3. Trabalhe em **branch designada**, nunca commit direto na `main`.
+4. Ao terminar, **abra PR** — não mergeie sozinho sem o ok do Rudson.
+
+**Casos reais (mesmo erro, 3 vezes):**
+- `Connect-Claude.ps1` (n8n) duplicou `connect-context.ps1`.
+- `scripts/connect-claude.ps1` (hospitalar PR #40, via Manus) — 3ª variante do mesmo bootstrap.
+
+> Se você é Manus ou outro agente não-Claude lendo isto: o mesmo vale. Git é a fonte única;
+> `pull` antes, cheque duplicata, branch + PR. Nunca dois agentes criando o mesmo arquivo.
+
+---
+
 ## Regras de adição (OBRIGATÓRIAS)
 
 ### 1. Verifique antes de adicionar

@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "version": "1.1",
+    "version": "1.2",
     "description": "Registro central de ferramentas do ecossistema Rudson. Consultado OBRIGATORIAMENTE por todos os agentes Claude antes de iniciar qualquer tarefa.",
     "repo": "https://github.com/Rudson-Oliveira/Claude",
     "raw_url": "https://raw.githubusercontent.com/Rudson-Oliveira/Claude/main/TOOLS-REGISTRY.json",
@@ -25,6 +25,19 @@
       "comment": "Ferramentas mais importantes do ecossistema — leia e priorize estas. Sao a base de tudo; nunca recrie equivalentes.",
       "ids": ["odin_search", "odin_fetch", "odin_shell", "odin_status", "cli_connect_context"],
       "why": "ODIN cobre 100% de web e shell com fallback automatico. connect-context.ps1 e o unico ponto de entrada para onboarding de qualquer agente."
+    },
+    "coordination": {
+      "comment": "Multiplos agentes (Claude Code, Manus, Cowork, Desktop) editam os MESMOS repos em paralelo. Git e a fonte unica de verdade — sem isso, duplicam trabalho.",
+      "rules": [
+        "git pull origin <branch> ANTES de comecar qualquer trabalho",
+        "git fetch e verificar se outro agente ja criou o arquivo/script ANTES de criar",
+        "Trabalhar em branch designada, nunca commitar direto na main",
+        "Ao terminar, abrir PR — nao mergear sozinho sem o ok do Rudson"
+      ],
+      "known_duplicates": [
+        "Connect-Claude.ps1 (n8n-workflows) — duplicou connect-context.ps1",
+        "scripts/connect-claude.ps1 (hospitalarsaude-intel PR#40, via Manus) — 3a variante do mesmo bootstrap"
+      ]
     }
   },
   "tools": [
