@@ -69,6 +69,22 @@ divergentes, manutenção dobrada. **Isso é exatamente o que o gate previne.**
 > Se você é Manus ou outro agente não-Claude lendo isto: o mesmo vale. Git é a fonte única;
 > `pull` antes, cheque duplicata, branch + PR. Nunca dois agentes criando o mesmo arquivo.
 
+### Antes de INSTALAR/INTEGRAR algo: cheque o inventário
+
+Consulte `ECOSYSTEM-INVENTORY.md` **antes** de abrir uma sessão de instalação:
+- ✅ já funciona → **use, não reinstale**
+- ⚠️ pendente → **retome/conserte**, não recomece
+- não existe → instale e **adicione ao inventário + ao registro**
+
+> Dezenas de sessões repetidas de "installation/integration" foram retrabalho evitável.
+> O inventário é o anti-retrabalho no nível de sessão.
+
+### Ambiente DEV compartilhado
+
+Mesmo ambiente, mesas separadas: **Git remoto + serviços locais (ODIN/Ollama/COMET/MySQL) são
+compartilhados**; cada agente trabalha em **branch/worktree própria**. Nunca dois agentes editando
+o mesmo working tree.
+
 ---
 
 ## Regras de adição (OBRIGATÓRIAS)

@@ -5,6 +5,7 @@
     "repo": "https://github.com/Rudson-Oliveira/Claude",
     "raw_url": "https://raw.githubusercontent.com/Rudson-Oliveira/Claude/main/TOOLS-REGISTRY.json",
     "rules_file": "TOOLS-REGISTRY-RULES.md",
+    "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-06-16",
     "total_tools": 23,
     "startup_protocol": {

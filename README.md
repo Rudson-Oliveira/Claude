@@ -58,5 +58,6 @@ Gera um briefing completo do estado atual + contexto para colar em qualquer Clau
 
 - [Catalogo de ferramentas](TOOLS-REGISTRY.json)
 - [Regras de contribuicao](TOOLS-REGISTRY-RULES.md)
+- [Inventario do ecossistema (o que ja foi instalado)](ECOSYSTEM-INVENTORY.md)
 - [Contexto universal](CONTEXT-UNIVERSAL.md)
 - [Repositorio principal](https://github.com/Rudson-Oliveira/CLAWDBOT-27-01-26)
