@@ -5,6 +5,25 @@
 
 ---
 
+## Frases-padrão anti-proliferação (scripts de conexão)
+
+Já existem 6 scripts de "conectar ao Claude" recriados por agentes diferentes. Use estas frases
+para cortar a duplicação — o canônico é `connect-context.ps1` (`_meta.canonical_connectors`).
+
+**A) Quando um agente oferecer/criar script de conexão (conserta):**
+> Não crie script de conexão novo. Já existe o canônico — `connect-context.ps1` (bootstrap de contexto).
+> Consulte `_meta.canonical_connectors` no registro antes de criar qualquer coisa:
+> https://raw.githubusercontent.com/Rudson-Oliveira/Claude/main/TOOLS-REGISTRY.json
+> Se faltar algo, estenda o canônico — não duplique.
+
+**B) Para substituir o prompt "me passe um PowerShell de conexão" (evita na origem):**
+> Antes de qualquer coisa, leia o registro do ecossistema:
+> https://raw.githubusercontent.com/Rudson-Oliveira/Claude/main/TOOLS-REGISTRY.json
+> Para conectar com contexto, use o canônico `connect-context.ps1` — não crie script novo.
+> Depois me explique o projeto e o que você consultou no registro.
+
+---
+
 ## CODEX (OpenAI)
 **Onde colar:** `~/.codex/AGENTS.md` (ou `AGENTS.md` do projeto) — campo de instruções do Codex.
 
