@@ -7,7 +7,7 @@
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-06-16",
-    "total_tools": 23,
+    "total_tools": 25,
     "startup_protocol": {
       "mandatory": true,
       "blocking": true,
@@ -370,6 +370,35 @@
       "example": ".\\connect-context.ps1 -Task 'implementar auth' -CopyToClipboard",
       "location": "C:\\Users\\rudpa\\connect-context.ps1 (repo CLAWDBOT)",
       "tags": ["bootstrap", "context", "powershell", "onboarding", "connect", "critical"],
+      "added": "2026-06-16",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "service_claude_bridge",
+      "name": "Claude MCP Bridge",
+      "type": "local-service",
+      "server": null,
+      "available_in": ["all"],
+      "status": "available",
+      "description": "Servidor FastMCP (porta 18791) que expoe o Claude (via Anthropic API) como tools para OUTROS agentes (Codex, Grok). Injeta project_context.md no system prompt. Tools: claude_query, claude_code_review, claude_architecture, claude_compliance_check, get_project_context, claude_orchestrate, claude_health",
+      "usage": "Start-ClaudeBridge.ps1 inicia; agentes (Codex/Grok) chamam via [mcp_servers.claude] nos configs deles",
+      "location": "C:\\Users\\rudpa\\Documents\\claude-stack\\claude_mcp_bridge.py (+ Start-ClaudeBridge.ps1)",
+      "note": "Criado fora do hub central (claude-stack). Tem docs proprias (CLAUDE_ORIENTATION.md, project_context.md, ECOSYSTEM-REF.md) que estao PARALELAS e em parte desatualizadas vs este registro — consolidar no futuro. Requer ANTHROPIC_API_KEY no env (nunca no Git).",
+      "tags": ["mcp", "bridge", "claude", "inter-agent", "anthropic", "orchestration"],
+      "added": "2026-06-16",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "service_grok_bridge",
+      "name": "Grok MCP Bridge",
+      "type": "local-service",
+      "server": null,
+      "available_in": ["all"],
+      "status": "available",
+      "description": "Servidor FastMCP (porta 18790) que expoe o Grok como tools para outros agentes. Irmao do Claude bridge.",
+      "usage": "Start-GrokBridge.ps1 inicia; agentes chamam via [mcp_servers.grok] nos configs",
+      "location": "C:\\Users\\rudpa\\Documents\\claude-stack\\grok_mcp_bridge.py (+ Start-GrokBridge.ps1)",
+      "tags": ["mcp", "bridge", "grok", "inter-agent"],
       "added": "2026-06-16",
       "added_by": "claude-code"
     }

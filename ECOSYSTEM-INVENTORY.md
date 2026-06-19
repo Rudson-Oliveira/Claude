@@ -47,6 +47,19 @@
 |---|---|
 | Claude managed agents (form) | 🔄 |
 
+## Bridges inter-agente (claude-stack)
+> Em `C:\Users\rudpa\Documents\claude-stack\`. Expõem um agente como MCP para os outros.
+
+| Item | Porta | Status |
+|---|---|---|
+| Claude MCP Bridge (`claude_mcp_bridge.py`) | 18791 | ✅ criado |
+| Grok MCP Bridge (`grok_mcp_bridge.py`) | 18790 | ✅ criado |
+
+> ⚠️ **Fragmentação a consolidar:** o `claude-stack` tem docs próprias (`ECOSYSTEM-REF.md`,
+> `project_context.md`, `CLAUDE_ORIENTATION.md`) **paralelas e em parte desatualizadas** vs.
+> este hub (ex.: ECOSYSTEM-REF aponta Python313; o ODIN usa Python314). Unificar para o hub
+> central ser a única fonte. Configs `[mcp_servers.claude]`/`[mcp_servers.grok]` em `.codex/` e `.grok/`.
+
 ---
 
 ## Regra (anti-retrabalho)
