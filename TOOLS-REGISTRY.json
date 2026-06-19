@@ -38,7 +38,8 @@
       "known_duplicates": [
         "Connect-Claude.ps1 (n8n-workflows) — duplicou connect-context.ps1",
         "scripts/connect-claude.ps1 (hospitalarsaude-intel PR#40, via Manus) — 3a variante do mesmo bootstrap",
-        "assistente-claude.ps1 + instalar-assistente.ps1 (n8n-workflows PR#2) — 4a variante: chat REPL p/ Claude API com CLAUDE.md de contexto + instalador global. Consolidar no canonico cli_connect_context."
+        "assistente-claude.ps1 + instalar-assistente.ps1 (n8n-workflows PR#2) — 4a variante: chat REPL p/ Claude API com CLAUDE.md de contexto + instalador global. Consolidar no canonico cli_connect_context.",
+        "start-claude.ps1 (hospitalarsaude-intel, agente nao-Manus) — 5a variante: bootstrap multi-repo (clona/instala/abre Claude Code com orientacao). 6 artefatos de 'conectar ao Claude' no total — CONSOLIDAR URGENTE no canonico."
       ],
       "sync_group": {
         "members": ["claude", "codex", "comet", "grok"],
