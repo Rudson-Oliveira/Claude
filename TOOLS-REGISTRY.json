@@ -38,7 +38,15 @@
       "known_duplicates": [
         "Connect-Claude.ps1 (n8n-workflows) — duplicou connect-context.ps1",
         "scripts/connect-claude.ps1 (hospitalarsaude-intel PR#40, via Manus) — 3a variante do mesmo bootstrap"
-      ]
+      ],
+      "sync_group": {
+        "members": ["claude", "codex", "comet", "grok"],
+        "rule": "Sincronizados: consultam este registro, escolhem a melhor ferramenta existente e nunca interferem no projeto um do outro."
+      },
+      "parallel_isolated": {
+        "manus": "Paralelo/isolado — custo alto. NAO rotear tarefas para ele nem auto-invoca-lo. Dono exclusivo do repo hospitalarsaude-intel; os demais nao editam esse repo."
+      },
+      "tool_selection": "Para cada pedido: 1) procure no registro a MELHOR ferramenta para o objetivo; 2) se nada servir, busque fora; 3) se a busca externa der certo, REGISTRE a descoberta (novo id) — cresce o repertorio do grupo. Ver inventory_file para o historico."
     }
   },
   "tools": [

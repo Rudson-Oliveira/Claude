@@ -85,6 +85,21 @@ Mesmo ambiente, mesas separadas: **Git remoto + serviços locais (ODIN/Ollama/CO
 compartilhados**; cada agente trabalha em **branch/worktree própria**. Nunca dois agentes editando
 o mesmo working tree.
 
+### Grupo em sincronia vs. paralelo
+
+- **Sincronizados (consultam este registro):** **Claude, Codex, COMET, Grok.** Escolhem a melhor
+  ferramenta existente, compartilham o repertório e **nunca interferem no projeto um do outro**.
+- **Paralelo/isolado: Manus.** Custo alto → **não rotear** tarefas para ele nem auto-invocá-lo.
+  É dono exclusivo do `hospitalarsaude-intel`; os demais não editam esse repo.
+
+### Seleção de ferramenta + registrar descobertas (cresce o repertório)
+
+Para cada pedido:
+1. Procure no registro a **melhor ferramenta** para o objetivo (use, não recrie).
+2. Se nada servir, **busque fora** (web, novo MCP, nova lib).
+3. Se a busca externa funcionou, **registre a descoberta** — adicione o novo `id` ao registro e
+   um item ao `ECOSYSTEM-INVENTORY.md`. Assim o repertório do grupo cresce e ninguém repete a busca.
+
 ---
 
 ## Regras de adição (OBRIGATÓRIAS)
