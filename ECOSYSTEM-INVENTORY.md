@@ -13,7 +13,7 @@
 | Metricool MCP server | ✅ |
 | n8n-mcp (GitHub integration) | ✅ |
 | MCP Windows desktop | 🔄 |
-| Browser Use integration | ⚠️ |
+| Browser Use integration (webhook n8n — repo n8n-workflows PR#2) | ⚠️ não verificado: sem processo/porta local; vive como workflow n8n |
 
 ## Skills / ferramentas de agente
 | Item | Status |
