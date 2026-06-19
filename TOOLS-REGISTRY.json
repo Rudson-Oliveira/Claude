@@ -7,7 +7,7 @@
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-06-16",
-    "total_tools": 25,
+    "total_tools": 26,
     "startup_protocol": {
       "mandatory": true,
       "blocking": true,
@@ -39,7 +39,8 @@
         "Connect-Claude.ps1 (n8n-workflows) — duplicou connect-context.ps1",
         "scripts/connect-claude.ps1 (hospitalarsaude-intel PR#40, via Manus) — 3a variante do mesmo bootstrap",
         "assistente-claude.ps1 + instalar-assistente.ps1 (n8n-workflows PR#2) — 4a variante: chat REPL p/ Claude API com CLAUDE.md de contexto + instalador global. Consolidar no canonico cli_connect_context.",
-        "start-claude.ps1 (hospitalarsaude-intel, agente nao-Manus) — 5a variante: bootstrap multi-repo (clona/instala/abre Claude Code com orientacao). 6 artefatos de 'conectar ao Claude' no total — CONSOLIDAR URGENTE no canonico."
+        "start-claude.ps1 (hospitalarsaude-intel, agente nao-Manus) — 5a variante: bootstrap multi-repo (clona/instala/abre Claude Code com orientacao). 6 artefatos de 'conectar ao Claude' no total — CONSOLIDAR URGENTE no canonico.",
+        "bootstrap.ps1 (Analise-Claude PR#4) — 6a variante + repo novo Analise-Claude. CAUSA-RAIZ: pedir 'me passe um PowerShell de conexao' a cada agente gera um script novo toda vez. Parar de pedir; apontar para o canonico connect-context.ps1."
       ],
       "sync_group": {
         "members": ["claude", "codex", "comet", "grok"],
@@ -415,6 +416,21 @@
       "usage": "Start-GrokBridge.ps1 inicia; agentes chamam via [mcp_servers.grok] nos configs",
       "location": "C:\\Users\\rudpa\\Documents\\claude-stack\\grok_mcp_bridge.py (+ Start-GrokBridge.ps1)",
       "tags": ["mcp", "bridge", "grok", "inter-agent"],
+      "added": "2026-06-16",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "mcp_metricool",
+      "name": "Metricool MCP",
+      "type": "mcp",
+      "server": "23fa2dc2",
+      "available_in": ["claude-code", "claude-desktop-code"],
+      "status": "available",
+      "description": "Gestao de redes sociais via Metricool: analytics, posts agendados, melhor horario por rede. Tools: getBrandSettings, getScheduledPosts, createScheduledPost, updateScheduledPost, getAnalyticsDataByMetrics, getAnalyticsAvailableMetrics, getBestTimeToPostByNetwork",
+      "usage": "createScheduledPost / getScheduledPosts / getBestTimeToPostByNetwork (brandId/blogId)",
+      "example": "getBrandSettings(blogId='6395876')",
+      "note": "Descoberto conectado nesta sessao (registrado p/ crescer o repertorio). Util ao pipeline de publicacao (carrosseis/videos). Referenciado no repo Analise-Claude.",
+      "tags": ["social", "metricool", "publishing", "analytics", "scheduling"],
       "added": "2026-06-16",
       "added_by": "claude-code"
     }
