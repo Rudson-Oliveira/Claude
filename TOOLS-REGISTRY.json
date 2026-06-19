@@ -46,7 +46,13 @@
         "rule": "Sincronizados: consultam este registro, escolhem a melhor ferramenta existente e nunca interferem no projeto um do outro."
       },
       "parallel_isolated": {
-        "manus": "Paralelo/isolado — custo alto. NAO rotear tarefas para ele nem auto-invoca-lo. Dono exclusivo do repo hospitalarsaude-intel; os demais nao editam esse repo."
+        "manus": "Paralelo/isolado — custo alto. NAO rotear tarefas para ele nem auto-invoca-lo. DONO EXCLUSIVO do repo hospitalarsaude-intel: os demais agentes NAO abrem PR nem commitam la — podem apenas LER, revisar e gerar orientacao para o Rudson repassar ao Manus. (Obs.: PR#15 foi aberto por agente nao-Manus nesse repo, violando a regra.)"
+      },
+      "canonical_connectors": {
+        "comment": "1 canonico por categoria — pare de recriar scripts de 'conectar ao Claude' (ja sao 6).",
+        "bootstrap_contexto": "connect-context.ps1 (cli_connect_context). start-claude.ps1 deve reusar este, nao duplicar.",
+        "chat_repl_api": "assistente-claude.ps1 (mais completo: cache, /comandos, modelos, -ContextoPath). Connect-Claude.ps1 e scripts/connect-claude.ps1 = aposentar/alias.",
+        "bridge_mcp_inter_agente": "claude_mcp_bridge.py (service_claude_bridge). Unico — manter."
       },
       "tool_selection": "Para cada pedido: 1) procure no registro a MELHOR ferramenta para o objetivo; 2) se nada servir, busque fora; 3) se a busca externa der certo, REGISTRE a descoberta (novo id) — cresce o repertorio do grupo. Ver inventory_file para o historico."
     }
