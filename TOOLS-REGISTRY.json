@@ -658,7 +658,7 @@
       "description": "Gestao de redes sociais via Metricool: analytics, posts agendados, melhor horario por rede. Tools: getBrandSettings, getScheduledPosts, createScheduledPost, updateScheduledPost, getAnalyticsDataByMetrics, getAnalyticsAvailableMetrics, getBestTimeToPostByNetwork",
       "usage": "createScheduledPost / getScheduledPosts / getBestTimeToPostByNetwork (brandId/blogId)",
       "example": "getBrandSettings(blogId='6395876')",
-      "note": "Descoberto conectado nesta sessao (registrado p/ crescer o repertorio). Util ao pipeline de publicacao (carrosseis/videos). Referenciado no repo Analise-Claude.",
+      "note": "Conectado nesta sessao. brandId/blogId=6395876 ('HospitaLar Solucoes em Saude', tz America/Sao_Paulo). CONECTADOS: Instagram @hospitalarsaude + Facebook page 566515420052044. Caminho mais simples p/ autopost IG/FB (dispensa Graph API token). Postar SO com OK do Rudson.",
       "tags": [
         "social",
         "metricool",
