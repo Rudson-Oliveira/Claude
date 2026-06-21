@@ -704,7 +704,7 @@
       "description": "GPU em nuvem sob demanda — pods por hora ou serverless por segundo. Roda ComfyUI em GPU forte. Pay-per-use, bom p/ orcamento pequeno. Tem endpoint serverless ComfyUI (clone no console).",
       "usage": "console.runpod.io — criar serverless endpoint (ComfyUI) ou pod; API REST com RUNPOD_API_KEY",
       "key_location": "C:\\Users\\rudpa\\.env -> RUNPOD_API_KEY (NUNCA no Git/registro)",
-      "note": "Saldo ~US$10 (jun/2026). Alternativa mais barata ao Comfy Cloud p/ uso pontual. Chave de API e segredo: rotacionar se exposta.",
+      "note": "Saldo ~US$10 (jun/2026). Alternativa mais barata ao Comfy Cloud. Endpoint serverless ComfyUI JA EXISTE: xs4fuq5jjkem1h ('ComfyUI 5.8.6'). Chave em .env lista a conta (200) mas v2/health deu 403 = escopo read-only; p/ rodar jobs criar chave com permissao serverless. Rotacionar a chave (foi exposta no chat).",
       "tags": [
         "gpu",
         "cloud",
