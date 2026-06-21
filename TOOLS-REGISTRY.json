@@ -7,7 +7,7 @@
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-06-16",
-    "total_tools": 26,
+    "total_tools": 27,
     "startup_protocol": {
       "mandatory": true,
       "blocking": true,
@@ -440,6 +440,20 @@
       "note": "Descoberto conectado nesta sessao (registrado p/ crescer o repertorio). Util ao pipeline de publicacao (carrosseis/videos). Referenciado no repo Analise-Claude.",
       "tags": ["social", "metricool", "publishing", "analytics", "scheduling"],
       "added": "2026-06-16",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "service_comfy_cloud",
+      "name": "Comfy Cloud (cloud.comfy.org)",
+      "type": "external-api",
+      "server": null,
+      "available_in": ["all"],
+      "status": "available",
+      "description": "ComfyUI no navegador com GPUs potentes, zero setup. Roda workflows de imagem/video sem instalar. Caminho recomendado p/ video-novela, ja que a GPU local e Intel iGPU (7GB, sem CUDA) e nao aguenta video.",
+      "usage": "https://cloud.comfy.org — login, montar/rodar workflow no browser; API p/ automacao (n8n) conforme plano",
+      "note": "PAGO (GPU cloud, login via Firebase). Conta/assinatura = Rudson faz o signup/login; NAO automatizar credenciais. Alternativa ao ComfyUI local (service_comfyui).",
+      "tags": ["comfyui", "cloud", "gpu", "video", "image", "saas"],
+      "added": "2026-06-19",
       "added_by": "claude-code"
     }
   ]
