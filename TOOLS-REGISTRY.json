@@ -49,6 +49,12 @@
       "parallel_isolated": {
         "manus": "Paralelo/isolado — custo alto. NAO rotear tarefas para ele nem auto-invoca-lo. DONO EXCLUSIVO do repo hospitalarsaude-intel: os demais agentes NAO abrem PR nem commitam la — podem apenas LER, revisar e gerar orientacao para o Rudson repassar ao Manus. (Obs.: PR#15 foi aberto por agente nao-Manus nesse repo, violando a regra.)"
       },
+      "runtime_isolation": {
+        "comment": "Claude e Codex compartilham o REGISTRO (conhecimento), mas rodam em runtimes MCP INDEPENDENTES — nao compartilham servidores singleton/porta (hub-central :5002, PowerShell proxy, autopilot, bridges). Sem isso, o 2o a abrir falha ('Codex da defeito').",
+        "claude": "Dono dos singletons do ecossistema (ODIN, hub-central, autopilot, PowerShell, bridges) via .claude.json.",
+        "codex": "So MCPs proprios stdio (node_repl, context7, filesystem, memory, sequential-thinking, win-cli) + metricool remoto. Sem singletons nem bridges. Assim Claude e Codex rodam ao mesmo tempo.",
+        "node_path": "Ambos usam C:\\Program Files\\nodejs (o nvm4w quebrou)."
+      },
       "canonical_connectors": {
         "comment": "1 canonico por categoria — pare de recriar scripts de 'conectar ao Claude' (ja sao 6).",
         "bootstrap_contexto": "connect-context.ps1 (cli_connect_context). start-claude.ps1 deve reusar este, nao duplicar.",
