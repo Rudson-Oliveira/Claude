@@ -7,7 +7,7 @@
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-06-16",
-    "total_tools": 28,
+    "total_tools": 29,
     "startup_protocol": {
       "mandatory": true,
       "blocking": true,
@@ -712,6 +712,30 @@
         "serverless",
         "comfyui",
         "video"
+      ],
+      "added": "2026-06-19",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "api_meta",
+      "name": "Meta Graph API (Facebook/Instagram)",
+      "type": "external-api",
+      "server": null,
+      "available_in": [
+        "all"
+      ],
+      "status": "experimental",
+      "description": "Publicacao/leitura em Facebook Page + Instagram Business via Graph API. App configurado e validado. IG alvo: @hospitalarsaude.",
+      "usage": "graph.facebook.com — precisa Page Access Token (long-lived) com instagram_content_publish + pages_manage_posts. IG deve ser Business/Creator ligado a uma Page.",
+      "key_location": "C:\\Users\\rudpa\\.env -> FB_APP_ID, FB_APP_SECRET (+ futuro FB_PAGE_TOKEN). NUNCA no Git.",
+      "note": "App ID+Secret SOZINHOS nao postam — falta Page Access Token (OAuth = Rudson autoriza). Alternativa mais simples: postar via Metricool (mcp_metricool) se IG/FB vinculados la. App Secret foi exposto no chat: regenerar.",
+      "tags": [
+        "facebook",
+        "instagram",
+        "meta",
+        "social",
+        "publishing",
+        "graph-api"
       ],
       "added": "2026-06-19",
       "added_by": "claude-code"
