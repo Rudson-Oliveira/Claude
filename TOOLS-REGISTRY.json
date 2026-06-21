@@ -7,7 +7,7 @@
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-06-16",
-    "total_tools": 27,
+    "total_tools": 28,
     "startup_protocol": {
       "mandatory": true,
       "blocking": true,
@@ -24,7 +24,13 @@
     },
     "critical_tools": {
       "comment": "Ferramentas mais importantes do ecossistema — leia e priorize estas. Sao a base de tudo; nunca recrie equivalentes.",
-      "ids": ["odin_search", "odin_fetch", "odin_shell", "odin_status", "cli_connect_context"],
+      "ids": [
+        "odin_search",
+        "odin_fetch",
+        "odin_shell",
+        "odin_status",
+        "cli_connect_context"
+      ],
       "why": "ODIN cobre 100% de web e shell com fallback automatico. connect-context.ps1 e o unico ponto de entrada para onboarding de qualquer agente."
     },
     "coordination": {
@@ -43,7 +49,12 @@
         "bootstrap.ps1 (Analise-Claude PR#4) — 6a variante + repo novo Analise-Claude. CAUSA-RAIZ: pedir 'me passe um PowerShell de conexao' a cada agente gera um script novo toda vez. Parar de pedir; apontar para o canonico connect-context.ps1."
       ],
       "sync_group": {
-        "members": ["claude", "codex", "comet", "grok"],
+        "members": [
+          "claude",
+          "codex",
+          "comet",
+          "grok"
+        ],
         "rule": "Sincronizados: consultam este registro, escolhem a melhor ferramenta existente e nunca interferem no projeto um do outro."
       },
       "parallel_isolated": {
@@ -70,12 +81,20 @@
       "name": "odin_search",
       "type": "mcp",
       "server": "odin",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Busca web com fallback automático Exa→Brave→DuckDuckGo→scraping HTML",
       "usage": "odin_search(query, max_results=5, mode='normal')",
       "example": "odin_search('fastmcp changelog 2025', max_results=3)",
-      "tags": ["web", "search", "internet", "fallback"],
+      "tags": [
+        "web",
+        "search",
+        "internet",
+        "fallback"
+      ],
       "added": "2026-06-11",
       "added_by": "claude-code"
     },
@@ -84,12 +103,21 @@
       "name": "odin_fetch",
       "type": "mcp",
       "server": "odin",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Requisição HTTP GET/POST com fallback ngrok automático para localhost",
       "usage": "odin_fetch(url, method='GET', headers='{}', body='')",
       "example": "odin_fetch('https://api.github.com/zen')",
-      "tags": ["http", "api", "fetch", "localhost", "ngrok"],
+      "tags": [
+        "http",
+        "api",
+        "fetch",
+        "localhost",
+        "ngrok"
+      ],
       "added": "2026-06-11",
       "added_by": "claude-code"
     },
@@ -98,12 +126,20 @@
       "name": "odin_scrape",
       "type": "mcp",
       "server": "odin",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Extrai texto de página web com seletor CSS opcional",
       "usage": "odin_scrape(url, selector='')",
       "example": "odin_scrape('https://docs.python.org/3/', 'article p')",
-      "tags": ["web", "scraping", "html", "parsing"],
+      "tags": [
+        "web",
+        "scraping",
+        "html",
+        "parsing"
+      ],
       "added": "2026-06-11",
       "added_by": "claude-code"
     },
@@ -112,12 +148,21 @@
       "name": "odin_shell",
       "type": "mcp",
       "server": "odin",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Executa comandos PowerShell com fallback automático para cmd.exe",
       "usage": "odin_shell(command, timeout=30)",
       "example": "odin_shell('Get-Process | Where CPU -gt 10')",
-      "tags": ["shell", "powershell", "cmd", "system", "fallback"],
+      "tags": [
+        "shell",
+        "powershell",
+        "cmd",
+        "system",
+        "fallback"
+      ],
       "added": "2026-06-11",
       "added_by": "claude-code"
     },
@@ -126,12 +171,20 @@
       "name": "odin_comet",
       "type": "mcp",
       "server": "odin",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Chama o COMET Hub (localhost:5000) com fallback ngrok",
       "usage": "odin_comet(endpoint='/', payload='{}')",
       "example": "odin_comet('/status', '{}')",
-      "tags": ["comet", "automation", "hub", "local"],
+      "tags": [
+        "comet",
+        "automation",
+        "hub",
+        "local"
+      ],
       "added": "2026-06-11",
       "added_by": "claude-code"
     },
@@ -140,12 +193,20 @@
       "name": "odin_status",
       "type": "mcp",
       "server": "odin",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Health check de todos os providers ODIN em tempo real",
       "usage": "odin_status()",
       "example": "odin_status()",
-      "tags": ["health", "status", "debug", "monitoring"],
+      "tags": [
+        "health",
+        "status",
+        "debug",
+        "monitoring"
+      ],
       "added": "2026-06-11",
       "added_by": "claude-code"
     },
@@ -154,12 +215,19 @@
       "name": "PowerShell MCP",
       "type": "mcp",
       "server": "PowerShell",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Shell PowerShell direto com suporte a processos interativos",
       "usage": "mcp__PowerShell__invoke_expression(command)",
       "example": "mcp__PowerShell__invoke_expression('Get-Date')",
-      "tags": ["shell", "powershell", "interactive"],
+      "tags": [
+        "shell",
+        "powershell",
+        "interactive"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -168,12 +236,21 @@
       "name": "Desktop Commander MCP",
       "type": "mcp",
       "server": "Desktop_Commander",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Controle de processos, arquivos e UI do desktop Windows",
       "usage": "mcp__Desktop_Commander__start_process / list_directory / read_file",
       "example": "mcp__Desktop_Commander__list_directory('C:\\\\Users\\\\rudpa')",
-      "tags": ["desktop", "process", "files", "ui", "windows"],
+      "tags": [
+        "desktop",
+        "process",
+        "files",
+        "ui",
+        "windows"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -182,12 +259,20 @@
       "name": "Exa MCP",
       "type": "mcp",
       "server": "847b21e2",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Busca web via Exa AI (fallback direto quando ODIN indisponível)",
       "usage": "mcp__847b21e2__web_search_exa(query) / web_fetch_exa(url)",
       "example": "mcp__847b21e2__web_search_exa('python asyncio tutorial')",
-      "tags": ["web", "search", "exa", "fallback"],
+      "tags": [
+        "web",
+        "search",
+        "exa",
+        "fallback"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -196,12 +281,21 @@
       "name": "Context7 MCP",
       "type": "mcp",
       "server": "context7",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Documentação atualizada de bibliotecas (npm, PyPI, etc.)",
       "usage": "resolve-library-id + get-library-docs",
       "example": "Consultar docs do FastAPI versão atual",
-      "tags": ["docs", "libraries", "npm", "python", "reference"],
+      "tags": [
+        "docs",
+        "libraries",
+        "npm",
+        "python",
+        "reference"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -210,12 +304,20 @@
       "name": "Sequential Thinking MCP",
       "type": "mcp",
       "server": "sequential-thinking",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Raciocínio profundo passo a passo para problemas complexos",
       "usage": "sequentialthinking tool",
       "example": "Análise de arquitetura, debugging complexo",
-      "tags": ["reasoning", "thinking", "analysis", "complex"],
+      "tags": [
+        "reasoning",
+        "thinking",
+        "analysis",
+        "complex"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -224,12 +326,20 @@
       "name": "n8n MCP",
       "type": "mcp",
       "server": "n8n",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Criação e execução de workflows de automação n8n",
       "usage": "search_workflows / execute_workflow / create_workflow_from_code",
       "example": "Automatizar envio de emails, webhooks, integrações",
-      "tags": ["automation", "workflow", "n8n", "integration"],
+      "tags": [
+        "automation",
+        "workflow",
+        "n8n",
+        "integration"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -238,12 +348,20 @@
       "name": "Ollama (LLMs locais)",
       "type": "local-service",
       "server": null,
-      "available_in": ["all"],
+      "available_in": [
+        "all"
+      ],
       "status": "active",
       "description": "LLMs locais rodando na porta 11434 (llama3, mistral, etc.)",
       "usage": "odin_fetch('http://localhost:11434/api/generate', body='{\"model\":\"llama3\",\"prompt\":\"...\"}')",
       "example": "Processar texto sem custo de API",
-      "tags": ["ai", "llm", "local", "ollama", "free"],
+      "tags": [
+        "ai",
+        "llm",
+        "local",
+        "ollama",
+        "free"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -252,12 +370,20 @@
       "name": "COMET Hub",
       "type": "local-service",
       "server": null,
-      "available_in": ["all"],
+      "available_in": [
+        "all"
+      ],
       "status": "active",
       "description": "Hub central de automação e agentes na porta 5000",
       "usage": "odin_comet('/endpoint', payload) ou odin_fetch('http://localhost:5000/...')",
       "example": "odin_comet('/status', '{}')",
-      "tags": ["comet", "hub", "automation", "agents", "local"],
+      "tags": [
+        "comet",
+        "hub",
+        "automation",
+        "agents",
+        "local"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -266,14 +392,23 @@
       "name": "ComfyUI (geração de imagens)",
       "type": "local-service",
       "server": null,
-      "available_in": ["all"],
+      "available_in": [
+        "all"
+      ],
       "status": "available",
       "description": "Geração de imagens/vídeo via Stable Diffusion na porta 8188. Pipelines node-based (App Mode/API). Potencial p/ vídeo-novela autônomo (ComfyUI-vidflows + Kling/Seedance/Wan local).",
       "usage": "odin_fetch('http://localhost:8188/api/...')",
       "example": "Gerar imagens/vídeo com prompts",
       "location": "C:\\Users\\rudpa\\ComfyUI-Installs (ComfyUI / Comfy Rudson)",
       "note": "INSTALADO, mas OFFLINE (:8188 não responde) e SEM integração a pipeline (n8n→API→autopost ainda é proposta, não construído). Vídeo full (vidflows multi-shot+lip-sync) pede GPU forte; versão simples (Kling/Seedance) roda em RTX 3090/4090.",
-      "tags": ["image", "video", "stable-diffusion", "comfyui", "generation", "local"],
+      "tags": [
+        "image",
+        "video",
+        "stable-diffusion",
+        "comfyui",
+        "generation",
+        "local"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -282,12 +417,20 @@
       "name": "Anthropic API (Claude)",
       "type": "external-api",
       "server": null,
-      "available_in": ["all"],
+      "available_in": [
+        "all"
+      ],
       "status": "active",
       "description": "API Claude para geração de texto, visão e agentes",
       "usage": "odin_fetch('https://api.anthropic.com/v1/messages', headers='{\"x-api-key\":\"...\"}', body='...')",
       "key_location": "C:\\Users\\rudpa\\.env → ANTHROPIC_API_KEY",
-      "tags": ["claude", "ai", "api", "anthropic", "llm"],
+      "tags": [
+        "claude",
+        "ai",
+        "api",
+        "anthropic",
+        "llm"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -296,12 +439,19 @@
       "name": "GitHub API",
       "type": "external-api",
       "server": null,
-      "available_in": ["all"],
+      "available_in": [
+        "all"
+      ],
       "status": "active",
       "description": "API GitHub para repos, issues, PRs, conteúdo raw",
       "usage": "odin_fetch('https://api.github.com/...' ou 'https://raw.githubusercontent.com/...')",
       "key_location": "C:\\Users\\rudpa\\.env → GITHUB_TOKEN (se existir)",
-      "tags": ["github", "git", "api", "repos"],
+      "tags": [
+        "github",
+        "git",
+        "api",
+        "repos"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -310,12 +460,21 @@
       "name": "Superpowers Skills",
       "type": "skill",
       "server": null,
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Conjunto de skills: brainstorming, TDD, debugging, code-review, plans",
       "usage": "Skill tool: superpowers:brainstorming / superpowers:test-driven-development / etc.",
       "example": "/code-review ultra — deep multi-agent review",
-      "tags": ["skill", "workflow", "tdd", "review", "planning"],
+      "tags": [
+        "skill",
+        "workflow",
+        "tdd",
+        "review",
+        "planning"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -324,12 +483,20 @@
       "name": "Deep Research Skill",
       "type": "skill",
       "server": null,
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Pesquisa multi-fonte com verificação adversarial e relatório citado",
       "usage": "Skill tool: deep-research",
       "example": "/deep-research 'como implementar RAG em Python 2025'",
-      "tags": ["research", "skill", "multi-agent", "verification"],
+      "tags": [
+        "research",
+        "skill",
+        "multi-agent",
+        "verification"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -338,12 +505,21 @@
       "name": "Computer Use MCP",
       "type": "mcp",
       "server": "computer-use",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Controle do desktop Windows via screenshot, clique, teclado",
       "usage": "mcp__computer-use__screenshot / left_click / type / scroll",
       "example": "Automatizar apps nativos Windows que não têm MCP dedicado",
-      "tags": ["desktop", "automation", "screenshot", "click", "keyboard"],
+      "tags": [
+        "desktop",
+        "automation",
+        "screenshot",
+        "click",
+        "keyboard"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -352,12 +528,21 @@
       "name": "Claude in Chrome MCP",
       "type": "mcp",
       "server": "Claude_in_Chrome",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "active",
       "description": "Controle de browser Chrome via extensão (DOM-aware, mais rápido que computer-use)",
       "usage": "mcp__Claude_in_Chrome__navigate / read_page / javascript_tool",
       "example": "Automatizar web apps, extrair dados, preencher formulários",
-      "tags": ["browser", "chrome", "web", "automation", "dom"],
+      "tags": [
+        "browser",
+        "chrome",
+        "web",
+        "automation",
+        "dom"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -366,7 +551,9 @@
       "name": "ngrok (túneis remotos)",
       "type": "local-service",
       "server": null,
-      "available_in": ["all"],
+      "available_in": [
+        "all"
+      ],
       "status": "configured",
       "description": "Túneis para acesso remoto a serviços locais (Plus subscription)",
       "config": "C:\\Users\\rudpa\\.ngrok2\\ngrok.yml",
@@ -377,7 +564,13 @@
         "hospitalar": "hospitalar-webhook.ngrok.app → localhost:3026"
       },
       "usage": "odin_status() para ver URLs ativas",
-      "tags": ["tunnel", "remote", "ngrok", "access", "webhook"],
+      "tags": [
+        "tunnel",
+        "remote",
+        "ngrok",
+        "access",
+        "webhook"
+      ],
       "added": "2026-06-14",
       "added_by": "claude-code"
     },
@@ -386,7 +579,9 @@
       "name": "connect-context.ps1 (bootstrap de contexto)",
       "type": "cli-tool",
       "server": null,
-      "available_in": ["all"],
+      "available_in": [
+        "all"
+      ],
       "status": "active",
       "critical": true,
       "note": "CANONICO. Qualquer agente/pessoa roda este script para conectar ao ecossistema com contexto completo. NAO crie scripts de conexao novos — estenda este. Connect-Claude.ps1 (repo n8n-workflows) e uma variante project-specific que DEVERIA carregar este registro e nao recriar a logica.",
@@ -394,7 +589,14 @@
       "usage": ".\\connect-context.ps1 [-Task '...'] [-CopyToClipboard] [-NoAPI]",
       "example": ".\\connect-context.ps1 -Task 'implementar auth' -CopyToClipboard",
       "location": "C:\\Users\\rudpa\\connect-context.ps1 (repo CLAWDBOT)",
-      "tags": ["bootstrap", "context", "powershell", "onboarding", "connect", "critical"],
+      "tags": [
+        "bootstrap",
+        "context",
+        "powershell",
+        "onboarding",
+        "connect",
+        "critical"
+      ],
       "added": "2026-06-16",
       "added_by": "claude-code"
     },
@@ -403,13 +605,22 @@
       "name": "Claude MCP Bridge",
       "type": "local-service",
       "server": null,
-      "available_in": ["all"],
+      "available_in": [
+        "all"
+      ],
       "status": "available",
       "description": "Servidor FastMCP (porta 18791) que expoe o Claude (via Anthropic API) como tools para OUTROS agentes (Codex, Grok). Injeta project_context.md no system prompt. Tools: claude_query, claude_code_review, claude_architecture, claude_compliance_check, get_project_context, claude_orchestrate, claude_health",
       "usage": "Start-ClaudeBridge.ps1 inicia; agentes (Codex/Grok) chamam via [mcp_servers.claude] nos configs deles",
       "location": "C:\\Users\\rudpa\\Documents\\claude-stack\\claude_mcp_bridge.py (+ Start-ClaudeBridge.ps1)",
       "note": "Criado fora do hub central (claude-stack). Tem docs proprias (CLAUDE_ORIENTATION.md, project_context.md, ECOSYSTEM-REF.md) que estao PARALELAS e em parte desatualizadas vs este registro — consolidar no futuro. Requer ANTHROPIC_API_KEY no env (nunca no Git).",
-      "tags": ["mcp", "bridge", "claude", "inter-agent", "anthropic", "orchestration"],
+      "tags": [
+        "mcp",
+        "bridge",
+        "claude",
+        "inter-agent",
+        "anthropic",
+        "orchestration"
+      ],
       "added": "2026-06-16",
       "added_by": "claude-code"
     },
@@ -418,12 +629,19 @@
       "name": "Grok MCP Bridge",
       "type": "local-service",
       "server": null,
-      "available_in": ["all"],
+      "available_in": [
+        "all"
+      ],
       "status": "available",
       "description": "Servidor FastMCP (porta 18790) que expoe o Grok como tools para outros agentes. Irmao do Claude bridge.",
       "usage": "Start-GrokBridge.ps1 inicia; agentes chamam via [mcp_servers.grok] nos configs",
       "location": "C:\\Users\\rudpa\\Documents\\claude-stack\\grok_mcp_bridge.py (+ Start-GrokBridge.ps1)",
-      "tags": ["mcp", "bridge", "grok", "inter-agent"],
+      "tags": [
+        "mcp",
+        "bridge",
+        "grok",
+        "inter-agent"
+      ],
       "added": "2026-06-16",
       "added_by": "claude-code"
     },
@@ -432,13 +650,22 @@
       "name": "Metricool MCP",
       "type": "mcp",
       "server": "23fa2dc2",
-      "available_in": ["claude-code", "claude-desktop-code"],
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
       "status": "available",
       "description": "Gestao de redes sociais via Metricool: analytics, posts agendados, melhor horario por rede. Tools: getBrandSettings, getScheduledPosts, createScheduledPost, updateScheduledPost, getAnalyticsDataByMetrics, getAnalyticsAvailableMetrics, getBestTimeToPostByNetwork",
       "usage": "createScheduledPost / getScheduledPosts / getBestTimeToPostByNetwork (brandId/blogId)",
       "example": "getBrandSettings(blogId='6395876')",
       "note": "Descoberto conectado nesta sessao (registrado p/ crescer o repertorio). Util ao pipeline de publicacao (carrosseis/videos). Referenciado no repo Analise-Claude.",
-      "tags": ["social", "metricool", "publishing", "analytics", "scheduling"],
+      "tags": [
+        "social",
+        "metricool",
+        "publishing",
+        "analytics",
+        "scheduling"
+      ],
       "added": "2026-06-16",
       "added_by": "claude-code"
     },
@@ -447,12 +674,45 @@
       "name": "Comfy Cloud (cloud.comfy.org)",
       "type": "external-api",
       "server": null,
-      "available_in": ["all"],
+      "available_in": [
+        "all"
+      ],
       "status": "available",
       "description": "ComfyUI no navegador com GPUs potentes, zero setup. Roda workflows de imagem/video sem instalar. Caminho recomendado p/ video-novela, ja que a GPU local e Intel iGPU (7GB, sem CUDA) e nao aguenta video.",
       "usage": "https://cloud.comfy.org — login, montar/rodar workflow no browser; API p/ automacao (n8n) conforme plano",
       "note": "PAGO (GPU cloud, login via Firebase). Conta/assinatura = Rudson faz o signup/login; NAO automatizar credenciais. Alternativa ao ComfyUI local (service_comfyui).",
-      "tags": ["comfyui", "cloud", "gpu", "video", "image", "saas"],
+      "tags": [
+        "comfyui",
+        "cloud",
+        "gpu",
+        "video",
+        "image",
+        "saas"
+      ],
+      "added": "2026-06-19",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "service_runpod",
+      "name": "RunPod (GPU cloud)",
+      "type": "external-api",
+      "server": null,
+      "available_in": [
+        "all"
+      ],
+      "status": "available",
+      "description": "GPU em nuvem sob demanda — pods por hora ou serverless por segundo. Roda ComfyUI em GPU forte. Pay-per-use, bom p/ orcamento pequeno. Tem endpoint serverless ComfyUI (clone no console).",
+      "usage": "console.runpod.io — criar serverless endpoint (ComfyUI) ou pod; API REST com RUNPOD_API_KEY",
+      "key_location": "C:\\Users\\rudpa\\.env -> RUNPOD_API_KEY (NUNCA no Git/registro)",
+      "note": "Saldo ~US$10 (jun/2026). Alternativa mais barata ao Comfy Cloud p/ uso pontual. Chave de API e segredo: rotacionar se exposta.",
+      "tags": [
+        "gpu",
+        "cloud",
+        "runpod",
+        "serverless",
+        "comfyui",
+        "video"
+      ],
       "added": "2026-06-19",
       "added_by": "claude-code"
     }
