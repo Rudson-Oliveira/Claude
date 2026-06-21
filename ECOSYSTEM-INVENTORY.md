@@ -62,6 +62,20 @@
 
 ---
 
+## Skills HSS (HospitaLar)
+> Skills do domínio HSS. Instaladas no OpenClaw; faltam no Claude Desktop.
+
+| Skill | OpenClaw | Claude Desktop |
+|---|---|---|
+| hss-community | ✅ | ⚠️ vazia/placeholder |
+| hss-company-template | ✅ | ❌ ausente |
+| hss-mcp-guardian | ✅ | ❌ ausente |
+| paperclip-healthcare | ✅ | ❌ ausente |
+| paperclip-orchestration | ✅ | ❌ ausente |
+| web-reverse-engineer | ✅ | ✅ |
+
+> `deploy-hss-skills.ps1` (deploy das HSS skills p/ Claude Desktop e/ou OpenClaw) **não existe localmente** — provável repo/PR de agente. Não recriar sem checar (anti-duplicação).
+
 ## Regra (anti-retrabalho)
 
 Antes de abrir uma sessão "Installation/Integration check" ou instalar algo:
