@@ -35,6 +35,13 @@
 - **Publicar é sempre com seu OK** (ação pública). Leitura/análise não precisa.
 - Tokens só no `.env`, nunca no Git.
 
+## 5b. Canais de publicação (Meta direto + Metricool) — redundância com papéis
+
+Dois canais conectados para IG/FB. Redundância é boa (resiliência), mas cada post sai por **UM** canal só, para não duplicar:
+- **Metricool** (MCP): calendário/agendamento manual, multi-rede (TikTok, LinkedIn, X, GBP), melhores horários, fluxo de equipe.
+- **Meta API direto** (token .env / painel social-hub): pipeline autônomo (RunPod→post), análise de funil sob medida, ações por conversa, insights profundos.
+- **Regra anti-duplicação:** conteúdo planejado da semana → Metricool. Conteúdo automático do pipeline → Meta API. Nunca os dois publicando o mesmo post.
+
 ## 6. Painel web (social-hub)
 Arquivo: `C:\Users\rudpa\social-hub\social_panel.py` (Python stdlib, sem dependências).
 Rodar: `python C:\Users\rudpa\social-hub\social_panel.py` → abrir `http://localhost:8910`.
