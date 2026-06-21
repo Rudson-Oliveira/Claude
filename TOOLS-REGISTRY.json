@@ -724,11 +724,11 @@
       "available_in": [
         "all"
       ],
-      "status": "experimental",
+      "status": "active",
       "description": "Publicacao/leitura em Facebook Page + Instagram Business via Graph API. App configurado e validado. IG alvo: @hospitalarsaude.",
       "usage": "graph.facebook.com — precisa Page Access Token (long-lived) com instagram_content_publish + pages_manage_posts. IG deve ser Business/Creator ligado a uma Page.",
       "key_location": "C:\\Users\\rudpa\\.env -> FB_APP_ID, FB_APP_SECRET (+ futuro FB_PAGE_TOKEN). NUNCA no Git.",
-      "note": "App ID+Secret SOZINHOS nao postam — falta Page Access Token (OAuth = Rudson autoriza). Alternativa mais simples: postar via Metricool (mcp_metricool) se IG/FB vinculados la. App Secret foi exposto no chat: regenerar.",
+      "note": "CONECTADO (jun/2026) via Graph API: FB page HospitaLar 566515420052044 + IG @hospitalarsaude 17841406246734858 (5033 seguidores). Tokens long-lived em .env (FB_PAGE_TOKEN, FB_PAGE_ID, IG_BUSINESS_ID) — nunca no Git. Conta tb administra paginas Baby Mae (360080954591190) e Hospitalar Loja (2088260318162076). Postar SO com OK do Rudson.",
       "tags": [
         "facebook",
         "instagram",
