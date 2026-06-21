@@ -3,6 +3,21 @@
 > Base: @hospitalarsaude (5.033 seg) + FB (10.665). Negócio: **Home Care, Remoção/UTI móvel,
 > Equipe Multidisciplinar**, certificada ONA + GPTW, Sul de MG (DDD 35), conversão via WhatsApp/plantão 24h.
 
+## 0. ANÁLISE REAL (dados das suas contas — jun/2026) 🔴 importante
+
+Puxei o desempenho real do @hospitalarsaude. Achado central:
+
+- **Conteúdo institucional/"cuidado" rende POUCO:** posts tipo "Imagine receber cuidados…", "Cuidar de quem amamos…" → alcance **60-160**, **0-3 likes, 0 salvamentos**. É genérico e passivo.
+- **Posts de VAGA de emprego EXPLODIRAM:** "Vaga Assistente Administrativo" → alcance **1.634 e 1.815** (10-20x o normal), 7-8 likes, **2-3 salvamentos**, 15-21 interações. Porque geram ação (marcar amigo, salvar, compartilhar).
+- **Zero vídeos/Reels recentes** — tudo FEED (imagem). Estão deixando de fora o formato de **maior alcance**.
+
+**Conclusões data-driven:**
+1. O público responde quando o conteúdo é **acionável/compartilhável** (vagas provaram isso). Falta aplicar isso ao conteúdo de captação.
+2. **Conteúdo "salvável"** (educativo, ex.: "5 sinais…") deve subir alcance — hoje os posts de cuidado têm 0 salvamentos.
+3. **Começar a postar Reels** é a maior alavanca de alcance não usada.
+
+---
+
 ## 1. Quem decide (persona = alvo do post)
 NÃO é o paciente idoso. É o **familiar (filho/filha, 35-60 anos)**, geralmente decidindo em
 **momento de alta hospitalar ou crise de saúde** de um pai/mãe. Estado emocional: medo, culpa, sobrecarga.

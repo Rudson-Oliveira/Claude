@@ -749,10 +749,10 @@
         "all"
       ],
       "status": "active",
-      "description": "Painel web local (Python stdlib, porta 8910) p/ postar imagem no IG/FB e ver dashboard (seguidores etc). Via direta com o Claude pela Meta Graph API, paralela a Metricool/CRM.",
+      "description": "Painel web local (Python stdlib, porta 8910): Dashboard, Funil/Analytics (insights reais IG), Publicar (imagem/carrossel/reels), Agendados (fila + scheduler). Via direta com o Claude pela Meta Graph API.",
       "usage": "python C:\\Users\\rudpa\\social-hub\\social_panel.py -> http://localhost:8910",
       "location": "C:\\Users\\rudpa\\social-hub\\social_panel.py",
-      "note": "Le tokens do .env. Publicar exige clique+confirmacao. v1: imagem (IG+FB). Roadmap: video/reels, carrossel, agendamento, analytics de funil. Guia: ORIENTACAO-SOCIAL.md.",
+      "note": "v2 (jun/2026): analytics REAL ativo (reach/saved/interactions por post), reels e agendamento incluidos. Le tokens do .env. Publicar exige confirmacao. Guia: ORIENTACAO-SOCIAL.md + CONTENT-PLAYBOOK-HOSPITALAR.md.",
       "tags": [
         "social",
         "panel",
