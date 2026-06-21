@@ -7,7 +7,7 @@
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-06-16",
-    "total_tools": 29,
+    "total_tools": 30,
     "startup_protocol": {
       "mandatory": true,
       "blocking": true,
@@ -736,6 +736,31 @@
         "social",
         "publishing",
         "graph-api"
+      ],
+      "added": "2026-06-19",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "service_social_panel",
+      "name": "Social Hub (painel local IG/FB)",
+      "type": "local-service",
+      "server": null,
+      "available_in": [
+        "all"
+      ],
+      "status": "active",
+      "description": "Painel web local (Python stdlib, porta 8910) p/ postar imagem no IG/FB e ver dashboard (seguidores etc). Via direta com o Claude pela Meta Graph API, paralela a Metricool/CRM.",
+      "usage": "python C:\\Users\\rudpa\\social-hub\\social_panel.py -> http://localhost:8910",
+      "location": "C:\\Users\\rudpa\\social-hub\\social_panel.py",
+      "note": "Le tokens do .env. Publicar exige clique+confirmacao. v1: imagem (IG+FB). Roadmap: video/reels, carrossel, agendamento, analytics de funil. Guia: ORIENTACAO-SOCIAL.md.",
+      "tags": [
+        "social",
+        "panel",
+        "instagram",
+        "facebook",
+        "local",
+        "publishing",
+        "dashboard"
       ],
       "added": "2026-06-19",
       "added_by": "claude-code"
