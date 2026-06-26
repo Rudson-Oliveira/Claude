@@ -7,7 +7,7 @@
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-06-16",
-    "total_tools": 30,
+    "total_tools": 33,
     "startup_protocol": {
       "mandatory": true,
       "blocking": true,
@@ -763,6 +763,78 @@
         "dashboard"
       ],
       "added": "2026-06-19",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "skill_video_prompting",
+      "name": "Video Prompting (Square-Zero)",
+      "type": "skill",
+      "server": null,
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
+      "status": "active",
+      "description": "Skill p/ redigir/refinar prompts de modelos de video (Seedance 2.0, Veo 3, Sora, Wan 2.2, LTX-2, Ovi) text-to-video e image-to-video, + workflow de character-sheets (personagem consistente).",
+      "usage": "Skill tool: video-prompting",
+      "example": "prompt de Reels p/ ComfyUI/RunPod com personagem consistente",
+      "note": "Instalada em .claude/skills/video-prompting. Chave p/ o pipeline video-novela (alimenta o ComfyUI/RunPod).",
+      "tags": [
+        "video",
+        "prompt",
+        "reels",
+        "character-sheet",
+        "ai",
+        "content"
+      ],
+      "added": "2026-06-21",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "skill_image_enhancer",
+      "name": "Image Enhancer (Composio)",
+      "type": "skill",
+      "server": null,
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
+      "status": "active",
+      "description": "Melhora qualidade de imagens: upscale, nitidez, reduz artefatos. Bom p/ preparar artes/posts de social.",
+      "usage": "Skill tool: image-enhancer",
+      "example": "melhorar a resolucao de uma arte do carrossel",
+      "note": "Instalada em .claude/skills/image-enhancer.",
+      "tags": [
+        "image",
+        "enhance",
+        "upscale",
+        "social",
+        "content"
+      ],
+      "added": "2026-06-21",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "skill_youtube_downloader",
+      "name": "YouTube Downloader (Composio)",
+      "type": "skill",
+      "server": null,
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
+      "status": "active",
+      "description": "Baixa videos do YouTube (qualidade/formato configuravel, audio MP3). Util p/ referencia/repurpose.",
+      "usage": "Skill tool: youtube-downloader",
+      "example": "baixar um video de referencia p/ analise",
+      "note": "Instalada em .claude/skills/youtube-downloader. Usa yt-dlp (instala na 1a vez).",
+      "tags": [
+        "video",
+        "download",
+        "youtube",
+        "reference"
+      ],
+      "added": "2026-06-21",
       "added_by": "claude-code"
     }
   ]
