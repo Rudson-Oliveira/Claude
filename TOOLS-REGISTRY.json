@@ -7,7 +7,7 @@
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-06-16",
-    "total_tools": 39,
+    "total_tools": 46,
     "startup_protocol": {
       "mandatory": true,
       "blocking": true,
@@ -363,7 +363,8 @@
         "free"
       ],
       "added": "2026-06-14",
-      "added_by": "claude-code"
+      "added_by": "claude-code",
+      "key_location": "C:\\Users\\rudpa\\.env -> OLLAMA_API_KEY (cloud/turbo)"
     },
     {
       "id": "service_comet",
@@ -690,7 +691,8 @@
         "saas"
       ],
       "added": "2026-06-19",
-      "added_by": "claude-code"
+      "added_by": "claude-code",
+      "key_location": "C:\\Users\\rudpa\\.env -> COMFY_CLOUD_API_KEY"
     },
     {
       "id": "service_runpod",
@@ -960,6 +962,151 @@
         "social",
         "optimization",
         "x"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "api_elevenlabs",
+      "name": "ElevenLabs (TTS/voz)",
+      "type": "external-api",
+      "server": null,
+      "available_in": [
+        "all"
+      ],
+      "status": "available",
+      "description": "Texto-para-voz e voz clonada. FECHA o gap de NARRACAO dos Reels/videos do marketing.",
+      "key_location": "C:\\Users\\rudpa\\.env -> ELEVENLABS_API_KEY (NUNCA no Git)",
+      "note": "",
+      "tags": [
+        "tts",
+        "voice",
+        "video",
+        "marketing"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "api_minimax",
+      "name": "MiniMax (video/imagem IA)",
+      "type": "external-api",
+      "server": null,
+      "available_in": [
+        "all"
+      ],
+      "status": "available",
+      "description": "Geracao de video e imagem por IA. Alternativa/complemento ao ComfyUI/RunPod para criativos.",
+      "key_location": "C:\\Users\\rudpa\\.env -> MINIMAX_API_KEY (NUNCA no Git)",
+      "note": "",
+      "tags": [
+        "video",
+        "image",
+        "ai",
+        "generation"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "api_firecrawl",
+      "name": "Firecrawl (scraping/research)",
+      "type": "external-api",
+      "server": null,
+      "available_in": [
+        "all"
+      ],
+      "status": "available",
+      "description": "Scraping e crawl estruturado de web. Pesquisa de mercado/concorrentes, coleta para RAG.",
+      "key_location": "C:\\Users\\rudpa\\.env -> FIRECRAWL_API_KEY (NUNCA no Git)",
+      "note": "",
+      "tags": [
+        "scraping",
+        "research",
+        "web",
+        "marketing"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "service_skyvern",
+      "name": "Skyvern (browser automation)",
+      "type": "mcp",
+      "server": null,
+      "available_in": [
+        "all"
+      ],
+      "status": "available",
+      "description": "Automacao de navegador por IA (MCP ja conectado nesta sessao). Autopost onde nao ha API, formularios, fluxos web.",
+      "key_location": "C:\\Users\\rudpa\\.env -> SKYVERN_API_KEY (NUNCA no Git)",
+      "note": "MCP conectado: mcp__skyvern__*. Org SKYVERN_ORG_ID no .env.",
+      "tags": [
+        "browser",
+        "automation",
+        "mcp",
+        "autopost"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "api_openrouter",
+      "name": "OpenRouter (LLM routing)",
+      "type": "external-api",
+      "server": null,
+      "available_in": [
+        "all"
+      ],
+      "status": "available",
+      "description": "Roteamento/fallback de LLMs (varios modelos por 1 API). Util p/ copy em massa barato.",
+      "key_location": "C:\\Users\\rudpa\\.env -> OPENROUTER_API_KEY (NUNCA no Git)",
+      "note": "",
+      "tags": [
+        "llm",
+        "routing",
+        "fallback",
+        "copy"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "api_xai_grok",
+      "name": "xAI Grok (API)",
+      "type": "external-api",
+      "server": null,
+      "available_in": [
+        "all"
+      ],
+      "status": "available",
+      "description": "API do Grok (xAI). LLM alternativo; complementa o grok bridge.",
+      "key_location": "C:\\Users\\rudpa\\.env -> XAI_API_KEY (NUNCA no Git)",
+      "note": "",
+      "tags": [
+        "llm",
+        "grok",
+        "xai"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "api_vercel",
+      "name": "Vercel (deploy)",
+      "type": "external-api",
+      "server": null,
+      "available_in": [
+        "all"
+      ],
+      "status": "available",
+      "description": "Deploy de landing pages/apps web. Util p/ paginas de campanha/captura.",
+      "key_location": "C:\\Users\\rudpa\\.env -> VERCEL_TOKEN (NUNCA no Git)",
+      "note": "",
+      "tags": [
+        "deploy",
+        "web",
+        "landing"
       ],
       "added": "2026-06-27",
       "added_by": "claude-code"

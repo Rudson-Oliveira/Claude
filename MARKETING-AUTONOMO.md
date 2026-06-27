@@ -41,8 +41,18 @@
 ## Princípios de conversão (fixos)
 Decisor = familiar · CTA único = WhatsApp (35) 98876-4610 · prova social (autorizada/LGPD) · conteúdo salvável/educativo · legenda em todo vídeo · cadência 3-4/semana · ONA+GPTW como autoridade.
 
+## Atualização 27/06 — novas chaves (fecham gaps) — todas no `.env`
+- **ElevenLabs** (`api_elevenlabs`) → **narração/voz** dos Reels = fecha boa parte do gap de vídeo (faltava voz).
+- **MiniMax** (`api_minimax`) + **Comfy Cloud** (`api_comfy_cloud`) → geração de vídeo/imagem IA (além do RunPod).
+- **Firecrawl** (`api_firecrawl`) → pesquisa/scraping de mercado e concorrentes.
+- **Skyvern** (`service_skyvern`, MCP conectado) → automação de navegador (autopost onde não há API, formulários).
+- **OpenRouter / Grok / Ollama** → LLMs para copy em massa (barato).
+- **Vercel** (`api_vercel`) → deploy de landing pages de campanha/captura.
+
+Gap de vídeo agora resume-se a: **montagem + legenda automática (Whisper)** — voz/geração já temos.
+
 ## Próximos passos
-1. Definir/instalar o **editor de vídeo** (legenda automática).
-2. Instalar **n8n-skills** e desenhar o workflow autônomo (cron).
+1. **Editor de vídeo**: montagem + legenda automática (Whisper). Voz = ElevenLabs; geração = RunPod/MiniMax/Comfy Cloud.
+2. Instalar **n8n-skills** e desenhar o workflow autônomo (cron) amarrando tudo.
 3. **Biblioteca de templates** branded.
 4. Integrar **funil de vendas** (CRM).
