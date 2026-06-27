@@ -7,7 +7,7 @@
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-06-16",
-    "total_tools": 33,
+    "total_tools": 34,
     "startup_protocol": {
       "mandatory": true,
       "blocking": true,
@@ -835,6 +835,27 @@
         "reference"
       ],
       "added": "2026-06-21",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "reference_awesome_claude_skills",
+      "name": "Awesome Claude Skills (catalogo)",
+      "type": "reference",
+      "server": null,
+      "available_in": [
+        "all"
+      ],
+      "status": "active",
+      "description": "Catalogo curado de Claude Skills (Composio): doc processing, dev, data, marketing, midia, automacao de 70+ apps. CONSULTAR antes de instalar skill nova (anti-duplicacao).",
+      "usage": "https://awesomeclaude.ai/awesome-claude-skills (repo: github.com/ComposioHQ/awesome-claude-skills)",
+      "note": "Shortlist curada p/ HospitaLar em SKILLS-RECOMENDADAS.md. Muitas ja vem nos plugins anthropic-skills/superpowers — nao reinstalar.",
+      "tags": [
+        "skills",
+        "catalog",
+        "reference",
+        "composio"
+      ],
+      "added": "2026-06-27",
       "added_by": "claude-code"
     }
   ]
