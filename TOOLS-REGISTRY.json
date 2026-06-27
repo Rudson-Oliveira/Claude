@@ -7,7 +7,7 @@
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-06-16",
-    "total_tools": 34,
+    "total_tools": 39,
     "startup_protocol": {
       "mandatory": true,
       "blocking": true,
@@ -854,6 +854,112 @@
         "catalog",
         "reference",
         "composio"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "skill_competitive_ads_extractor",
+      "name": "Competitive Ads Extractor",
+      "type": "skill",
+      "server": null,
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
+      "status": "active",
+      "description": "Extrai/analisa anuncios de concorrentes (Facebook/LinkedIn Ad Library) — messaging e criativos que funcionam.",
+      "usage": "Skill tool: competitive-ads-extractor",
+      "note": "Instalada em .claude/skills/. Fonte: awesome-claude-skills.",
+      "tags": [
+        "ads",
+        "competitor",
+        "marketing"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "skill_content_research_writer",
+      "name": "Content Research Writer",
+      "type": "skill",
+      "server": null,
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
+      "status": "active",
+      "description": "Escreve conteudo com pesquisa, citacoes, hooks e iteracao de outline. Producao de conteudo educativo.",
+      "usage": "Skill tool: content-research-writer",
+      "note": "Instalada em .claude/skills/. Fonte: awesome-claude-skills.",
+      "tags": [
+        "content",
+        "writing",
+        "marketing"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "skill_invoice_organizer",
+      "name": "Invoice Organizer",
+      "type": "skill",
+      "server": null,
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
+      "status": "active",
+      "description": "Organiza notas/orcamentos/recibos: le, extrai dados, renomeia e ordena. Util p/ orcamentos/financeiro.",
+      "usage": "Skill tool: invoice-organizer",
+      "note": "Instalada em .claude/skills/. Fonte: awesome-claude-skills.",
+      "tags": [
+        "invoice",
+        "finance",
+        "orcamento"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "skill_lead_research_assistant",
+      "name": "Lead Research Assistant",
+      "type": "skill",
+      "server": null,
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
+      "status": "active",
+      "description": "Identifica leads/parceiros: analisa o negocio, busca empresas-alvo e da estrategia de contato. B2B (hospitais/clinicas/geriatras).",
+      "usage": "Skill tool: lead-research-assistant",
+      "note": "Instalada em .claude/skills/. Fonte: awesome-claude-skills.",
+      "tags": [
+        "leads",
+        "b2b",
+        "sales",
+        "parceiros"
+      ],
+      "added": "2026-06-27",
+      "added_by": "claude-code"
+    },
+    {
+      "id": "skill_twitter_optimizer",
+      "name": "Twitter Algorithm Optimizer",
+      "type": "skill",
+      "server": null,
+      "available_in": [
+        "claude-code",
+        "claude-desktop-code"
+      ],
+      "status": "active",
+      "description": "Otimiza posts para alcance com base no algoritmo aberto do Twitter/X.",
+      "usage": "Skill tool: twitter-optimizer",
+      "note": "Instalada em .claude/skills/. Fonte: awesome-claude-skills.",
+      "tags": [
+        "social",
+        "optimization",
+        "x"
       ],
       "added": "2026-06-27",
       "added_by": "claude-code"
