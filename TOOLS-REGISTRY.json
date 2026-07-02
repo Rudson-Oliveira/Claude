@@ -354,7 +354,7 @@
       "status": "active",
       "description": "LLMs locais rodando na porta 11434 (llama3, mistral, etc.)",
       "usage": "odin_fetch('http://localhost:11434/api/generate', body='{\"model\":\"llama3\",\"prompt\":\"...\"}')",
-      "public_url": "https://manus-comet-hospital.ngrok-free.dev",      "public_endpoint": "https://manus-comet-hospital.ngrok-free.dev/v1/chat/completions",,
+      "public_url": "https://manus-comet-hospital.ngrok-free.dev",      "public_endpoint": "https://manus-comet-hospital.ngrok-free.dev/v1/chat/completions",
       "tags": [
         "ai",
         "llm",
