@@ -6,7 +6,7 @@
     "raw_url": "https://raw.githubusercontent.com/Rudson-Oliveira/Claude/main/TOOLS-REGISTRY.json",
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
-    "last_updated": "2026-06-16",
+    "last_updated": "2026-07-02",
     "total_tools": 46,
     "startup_protocol": {
       "mandatory": true,
@@ -354,7 +354,7 @@
       "status": "active",
       "description": "LLMs locais rodando na porta 11434 (llama3, mistral, etc.)",
       "usage": "odin_fetch('http://localhost:11434/api/generate', body='{\"model\":\"llama3\",\"prompt\":\"...\"}')",
-      "example": "Processar texto sem custo de API",
+      "public_url": "https://manus-comet-hospital.ngrok-free.dev",      "public_endpoint": "https://manus-comet-hospital.ngrok-free.dev/v1/chat/completions",,
       "tags": [
         "ai",
         "llm",
@@ -556,7 +556,7 @@
         "all"
       ],
       "status": "configured",
-      "description": "Túneis para acesso remoto a serviços locais (Plus subscription)",
+      "description": "Túneis para acesso remoto a serviços locais. Plano Pay-as-you-go: domínio fixo, sem interstitial, bandwidth ilimitado, Traffic Policy disponível. Ver OLLAMA-NGROK.md para uso completo",
       "config": "C:\\Users\\rudpa\\.ngrok2\\ngrok.yml",
       "tunnels": {
         "comet": "localhost:5000",
