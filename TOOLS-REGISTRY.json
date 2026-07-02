@@ -7,7 +7,7 @@
     "rules_file": "TOOLS-REGISTRY-RULES.md",
     "inventory_file": "ECOSYSTEM-INVENTORY.md",
     "last_updated": "2026-07-02",
-    "total_tools": 46,
+    "total_tools": 47,
     "startup_protocol": {
       "mandatory": true,
       "blocking": true,
@@ -1110,6 +1110,23 @@
       ],
       "added": "2026-06-27",
       "added_by": "claude-code"
-    }
+    },
+      {
+            "id": "service_huggingface",
+            "name": "Hugging Face Hub",
+            "type": "external-api",
+            "server": null,
+            "available_in": ["all"],
+            "status": "active",
+            "description": "Plataforma HF: modelos, datasets, Spaces, Inference Providers, MCP nativo. Creditos: $40.00 (ciclo encerra Aug 1). Provedores com chave propria: Groq (gsk_...VLLX), Zai (xai...hi2h). MCP server em https://hf.co/mcp com 9 built-in tools (busca semantica, file management, run jobs, hub query). Local Apps: Ollama marcado como preferido. 3 Spaces ativos: cosmic-data-explor, medisync-magic-dos, medisync-pro-turbo.",
+            "mcp_endpoint": "https://hf.co/mcp",
+            "mcp_config": "npx mcp-remote https://hf.co/mcp (requer HF_TOKEN no env)",
+            "inference_api": "https://router.huggingface.co/v1/chat/completions",
+            "key_location": "C:\\Users\\rudpa\\.env -> HF_TOKEN (NUNCA no Git)",
+            "ref_doc": "HUGGINGFACE-NGROK.md",
+            "tags": ["huggingface", "hf", "models", "inference", "mcp", "spaces", "ollama"],
+            "added": "2026-07-02",
+            "added_by": "claude-code"
+      }
   ]
 }
